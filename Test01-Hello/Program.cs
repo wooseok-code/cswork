@@ -14,12 +14,13 @@ namespace Test01_Hello
     {
         static void Main(string[] args)
         {
-  /*          Program pgm = new Program();
-            int i = pgm.function();*/
+            /*          Program pgm = new Program();
+                      int i = pgm.function();*/
             Test01 Sub = new Test01();
             Sub.MainFunc();
         }
-        int function() { 
+        int function()
+        {
             while (true)
             {
 
@@ -28,17 +29,25 @@ namespace Test01_Hello
         }
     }
     class Test01 // main class
-    {        
+    {
         public void MainFunc()
         {
+            //var v = 100;
             int i = 10;
             int j = 20;
             double d = 1.5;
             double e = 3.1;
             Object o = i + 1;
+            var v = i * 10;
             WriteLine($"i : {i}\nj : {j}\nd : {d}\ne : {e}\no : {o}");
             o = e + 0.5;
-            WriteLine($"i : {i}\nj : {j}\nd : {d}\ne : {e}\no : {o}"); 
+
+            int k = sizeof(int);
+            WriteLine($"int size:{sizeof(int)}, double size:{sizeof(double)}");
+            //v = d * 10;
+            WriteLine($"i : {i}\nj : {j}\nd : {d}\ne : {e}\no : {o}");
+
+            // ttt
 
             while (true)
             {
@@ -71,7 +80,7 @@ namespace Test01_Hello
 
                 }
             }
-            
+
             //WriteLine(str);
             //WriteLine(str2);
 
