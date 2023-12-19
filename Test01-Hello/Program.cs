@@ -34,6 +34,21 @@ namespace Test01_Hello
         {
             return Sqrt(Pow((p1.x - p2.x), 2) + Pow((p1.y - p2.y), 2));
         }
+
+        public double getArea(Point p1, Point p2)
+        {
+            return Sqrt((Pow((p1.x - p2.x) * (p1.y - p2.y), 2)));
+        }
+
+        public static double operator -(Point p1, Point p2)
+        {
+            return Sqrt(Pow((p1.x - p2.x), 2) + Pow((p1.y - p2.y), 2));
+        }
+        public static double operator *(Point p1, Point p2)
+        {
+            return Sqrt((Pow((p1.x - p2.x) * (p1.y - p2.y), 2)));
+        }
+
     }
 
     internal class Program
@@ -46,7 +61,9 @@ namespace Test01_Hello
             Point p2 = new Point(6, 9);
             double dd = 0;
             dd = point.Dist(p1, p2);
-            WriteLine($"distance : {dd:F2}\n"); // :F2 반올림하여 소수점 이하 두번째자리까지 출력
+            WriteLine($"distance : {dd:F2}\n");     // :F2 반올림하여 소수점 이하 두번째자리까지 출력
+            dd = point.getArea(p1, p2);
+            WriteLine($"Area : {dd:F2}\n");         // :F2 반올림하여 소수점 이하 두번째자리까지 출력
 
             /*          Program pgm = new Program();
                       int i = pgm.function();*/
@@ -80,6 +97,7 @@ namespace Test01_Hello
             WriteLine($"int size:{sizeof(int)}, double size:{sizeof(double)}");
             //v = d * 10;
             WriteLine($"i : {i}\nj : {j}\nd : {d}\ne : {e}\no : {o}");
+            int[] arr = new int[100];
 
             // ttt
             // myLib my = new myLib(); // static으로 선언하면 쓰지않는다
